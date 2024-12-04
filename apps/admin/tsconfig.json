@@ -1,9 +1,44 @@
 {
-  "exclude": ["node_modules"],
-  "extends": "@repo/typescript-config/vite.json",
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "ESNext",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "target": "ESNext",
+    "types": [
+      "vite/client"
+    ],
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "Bundler",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "strict": true,
+    "strictNullChecks": true
   },
-  "include": ["src", "vite.config.ts"]
+  "include": [
+    "src",
+    "api/**/*",
+    "graphql/**/*",
+    "vite.config.ts"
+  ]
 }
